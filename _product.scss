@@ -5,6 +5,9 @@ a {
     text-decoration: none;
 }
 
+// details summary::-webkit-details-marker {
+//     display: none;
+// }
 
 .arrivals {
     @include flexFull;
@@ -35,14 +38,13 @@ a {
 
 .carousel {
     background-color: $pictureBoxBackground;
-    // height: 777px;
 
     &-inner {
         z-index: 1;
     }
 
     &-item {
-        left: 17%;
+        left: 25%;
         top: 0;
     }
 
@@ -52,55 +54,128 @@ a {
     }
 
     &-control-next {
-        width: 10%;
-        left: 87%;
+        width: 31px;
+        left: 96%;
     }
 
     &-control-prev {
+        width: 31px;
         left: 0;
     }
 }
 
 
+
+.product_description-empty {
+    // top: 130vh;
+    max-width: 1600px;
+    height: 76px;
+    position: absolute;
+    background-color: black;
+    z-index: 0;
+}
+
 .product_description {
-    display: flex;
-    justify-content: space-between;
     background-color: $bodyBackground;
 
-    &-empty {
-        min-width: 230px;
-        height: 64px;
-        background-color: $pictureBoxBackground;
-    }
-
     &-box {
-        // width: $bodyWidth;
-        padding: 64px 0;
         text-align: center;
+        border: 1px solid;
+        padding: 64px 0;
+        border: 1px solid #EAEAEA;
     }
 
     &-collection {
         @include fontStyle (14px, 300, $mainTextColor: $mainColor);
-        padding-bottom: 12px;
-    }
-
-    &-line {
-        border-bottom: 3px solid $mainColor;
-        margin: 0 44%;
     }
 
     &-title {
-        padding: 12px 0 48px 0;
+        padding: 8px 0 48px 0;
         @include fontStyle (18px, 300, $mainTextColor: $descriptionTitleTextColor);
     }
 
     &-text {
-        @include fontStyle (14px);
-
-
+        @include fontStyle (14px, 300);
+        padding-bottom: 32px;
+        width: 550px;
+        margin: auto;
+        text-align: center;
     }
 
     &-price {
-        @include fontStyle (300, $mainTextColor: $mainColor);
+        @include fontStyle (24px, 300, $mainTextColor: $mainColor);
     }
+}
+
+
+.description-sorting {
+    position: relative;
+    @include flexFull;
+    @include fontStyle (14px, 400);
+    gap: 42px;
+    padding: 60px 0 48px 0;
+
+    &-menu-icon {
+        margin-left: 9px;
+    }
+
+    &-menu-box {
+        position: absolute;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+    }
+
+    &-menu-box-color {
+        width: 150px;
+        position: absolute;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+    }
+
+
+    %userSelect {
+        user-select: none;
+        list-style: none;
+    }
+
+    &-menu-colortitle {
+        @extend %userSelect;
+    }
+
+    &-menu-sizetitle {
+        @extend %userSelect;
+    }
+
+    &-menu-pricetitle {
+        @extend %userSelect;
+    }
+
+    &-menu-check {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.add_cart-button {
+    background-color: #FFFFFF;
+    border: 1px solid $mainColor;
+}
+
+
+.section_bottom {
+    padding: 129px 0;
+    margin: 0 !important;
 }
