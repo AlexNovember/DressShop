@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <head>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
@@ -11,7 +22,7 @@
 </head>
 
 <body>
-
+    
     <header class="title center">
         <div class="title_menu">
             <div class="left_menu">
@@ -76,78 +87,46 @@
     </header>
 
     <section class="arrivals center">
-        <h3 class="arrivals-new-arrivals-cart">SHOPPING CART</h3>
+        <h3 class="arrivals-new-arrivals-cart">REGISTRATION</h3>
     </section>
 
-    <section class="goods_in_cart center">
-        <div class="goods_in_cart-box">
-            <div class="goods_in_cart-left-block">
-                <div class="goods_in_cart-left-block-items">
-                    <img class="goods_in_cart-left-block-img" src="img/bottom3.jpg" alt="man">
-                    <div class="goods_in_cart-left-block-item">
-                        <h3 class="goods_in_cart-left-block-item-name">MANGO PEOPLE T-SHIRT</h3><br>
-                        <p class="goods_in_cart-left-block-item-price">Price: <span>$300</span></p>
-                        <p class="goods_in_cart-left-block-item-color">Color: Red</p>
-                        <p class="goods_in_cart-left-block-item-color">Size: XL</p>
-                        <p class="goods_in_cart-left-block-item-quantity	">Quantity:<input
-                                class="goods_in_cart-left-block-item-quantity-input" type="number" step="1"
-                                placeholder="1" min="1">
-                        </p>
-                        <div class="closeModal"></div>
-                    </div>
-                </div>
-                <div class="goods_in_cart-left-block-items">
-                    <img class="goods_in_cart-left-block-img" src="img/cart_img.jpg" alt="man">
-                    <div class="goods_in_cart-left-block-item">
-                        <h3 class="goods_in_cart-left-block-item-name">MANGO PEOPLE T-SHIRT</h3><br>
-                        <p class="goods_in_cart-left-block-item-price">Price: <span>$300</span></p>
-                        <p class="goods_in_cart-left-block-item-color">Color: Red</p>
-                        <p class="goods_in_cart-left-block-item-color">Size: XL</p>
-                        <p class="goods_in_cart-left-block-item-quantity	">Quantity: <input
-                                class="goods_in_cart-left-block-item-quantity-input" type="number" step="1"
-                                placeholder="1" min="1">
-                        </p>
-                        <div class="closeModal"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="goods_in_cart-right-block">
-                <h3 class="goods_in_cart-right-block-title">SHIPPING ADRESS</h3>
-                <input class="goods_in_cart-right-block-input" type="text" name="country" id="country"
-                    placeholder="Bangladesh" required>
-                <input class="goods_in_cart-right-block-input" type="text" name="state" id="state" placeholder="State"
-                    required>
-                <input class="goods_in_cart-right-block-input" type="text" name="post" id="post"
-                    placeholder="Postcode / Zip" required>
-                    <button class="goods_in_cart-right-block-quote" type="submit">GET A QUOTE</button>
-                
-                <div class="goods_in_cart-right-block-checkout">
-                    <div class="value_box">
-                        <p class="goods_in_cart-right-block-checkout-subtotal">SUB TOTAL<span
-                                class="goods_in_cart-right-block-checkout-subtotal-value">$900</span> </p>
-                        <p class="goods_in_cart-right-block-checkout-grundtotal">GRUND TOTAL<span
-                                class="goods_in_cart-right-block-checkout-grundtotal-value">$900</span> </p>
-                    </div>
-                    <hr class="goods_in_cart-right-block-checkout-line">
-                    <button class="goods_in_cart-right-block-checkout-link" type="submit">PROCEED TO CHECKOUT</button>
-                </div>
-            </div>
-
-            <div class="goods_in_cart-box-buttons">
-                <div class="goods_in_cart-box-button">
-                    <a href="#">
-                        <p class="goods_in_cart-box-button-clear">CLEAR SHOPPING CART</p>
-                    </a>
-                </div>
-                <div class="goods_in_cart-box-button">
-                    <a href="#">
-                        <p class="goods_in_cart-box-button-continue">CONTINUE SHOPPING</p>
-                    </a>
-                </div>
-            </div>
+    <section class="reg_form center">
+        <form class="reg_form-left" action="#">
+        <h6 class="reg_form-left-title">Your Name</h6>
+        <input class="reg_form-left-form" type="text" name="first-name" id="" placeholder="First Name"
+        required>
+        <input class="reg_form-left-form" type="text" name="last-name" id="" placeholder="Last Name"
+        required>
+        <div class="reg_form-left-radio">
+        <input class="reg_form-left-radio-button" type="radio" name="reg_form-male" id="male" required>
+        <label class="reg_form-left-radio-button" for="male">Male</label>
+        <input class="reg_form-left-radio-button" type="radio" name="reg_form-female" id="female" required>
+        <label class="reg_form-left-radio-button" for="female">Female</label>
+        <input class="reg_form-left-radio-button radio-other" type="radio" name="reg_form-other" id="other" required>
+        <label class="reg_form-left-radio-button radio-other" for="other">Other</label>
         </div>
-    </section>
+        <h6 class="reg_form-left-login-title">Login details</h6>
+        <input class="reg_form-left-form" type="email" required name="reg_form-left-email" id="" placeholder="Email">
+        <input class="reg_form-left-form" type="password" required name="reg_form-left-password" id="" placeholder="Password">
+        <p class="reg_form-left-rule">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+        <button class="reg_form-left-submit" type="submit">JOIN NOW <svg class="reg_form-left-submit-icon"  width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" fill="white"/>
+            </svg>
+            </button>
+        </form>
+         
+
+        <div class="reg_form-right">
+        <h2 class="reg_form-right-title">LOYALTY HAS ITS PERKS</h2>
+        <p class="reg_form-right-rule">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+        <p class="reg_form-right-text">15% off welcome offer</p>
+        <p class="reg_form-right-text">Free shipping, returns and exchanges on all orders</p>
+        <p class="reg_form-right-text">$10 off a purchase on your birthday</p>
+        <p class="reg_form-right-text">Early access to products</p>
+        <p class="reg_form-right-text">Exclusive offers & rewards</p>
+        </div>
+     </section>
 
     <section class="register center">
         <div class="register_block">
@@ -229,5 +208,5 @@
     </footer>
 
 </body>
-
+    
 </html>

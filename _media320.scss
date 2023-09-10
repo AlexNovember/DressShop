@@ -2,12 +2,11 @@
 
     .center {
         padding: 0 calc(50vw - 171.5px);
-    }
-
-    .center_top {
+        
+        &_top {
         padding: 0 calc(50vw - 187.5px);
+        }
     }
-
 
     .icons,
     .brand_left,
@@ -17,15 +16,17 @@
 
     .brand {
         min-height: 383px;
-    }
-
-    .brand_right {
+        
+        &_right {
         display: flex;
         width: 100%;
         justify-content: center;
         flex-direction: row;
         align-items: center;
+        }
     }
+
+    
 
     .box_red_line {
         padding-left: 0;
@@ -35,6 +36,70 @@
         font-size: 38px;
     }
 
+    .arrivals {
+        flex-direction: column;
+        padding: 24px 0 46px;
+    }
+
+    .filter-sort {
+        padding: 26px 0 41px;
+        @include fontStyle (12px, 400);
+        justify-content: space-between;
+    }
+  
+    .filter_heading {
+        display: none;
+    }
+
+    .description-sorting {
+        justify-content: flex-end;
+        gap:23px;      
+        @include fontStyle (12px, 400);
+          
+        
+        &-menu {
+        @include fontStyle (12px, 400);
+        }
+        
+        &-menu-filter {
+        padding: 0;
+        top: 24px;
+        }
+
+        
+        &-menu-box{
+            width: 60px;
+            
+            &-color {
+            width: 112px;
+            }
+        }
+    }
+        
+   .icon-big {
+        margin-left: 0;
+        width: 37.5px;
+        height: 25px;
+    }    
+    
+
+    
+    
+
+
+    .filter-sort {
+        gap:61.5px;
+    }
+
+    .text_upper_small {
+        font-size: 16px;
+    }
+
+    .text_upper_big {
+        font-size: 20px;
+    }
+
+    .text_red
     .bottom_text,
     .text_red {
         font-size: 20px;
@@ -80,25 +145,35 @@
     .register {
         height: 550px;
         background-position: top left;
-    }
-
-    .register_block {
+        
+        &_block {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .register-info {
+        }
+        
+        &-info {
         padding-top: 64px;
-    }
-
-    .register-form {
+        }
+        
+        &-form {
+        padding-right: 0;
         padding-top: 59px;
         gap: 22px;
     }
+}
+
+    
+
+    
+    
 
     .input-form-inputs {
         justify-content: center;
+    }
+
+    .right_left_slider {
+        margin-bottom: 64px;
     }
 
     .footer-items {
