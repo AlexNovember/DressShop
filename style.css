@@ -591,18 +591,6 @@ ul {
   margin-top: 0px;
 }
 
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-ul {
-  text-decoration: none;
-  margin-bottom: 0;
-}
-
 .description-sorting-menu-pricetitle:hover, .description-sorting-menu-sizetitle:hover, .description-sorting-menu-colortitle:hover {
   transform: scale(1.03);
   color: #F16D7F;
@@ -911,7 +899,7 @@ input[type=text]:focus {
 
 .goods_in_cart-box {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
   gap: 128px;
 }
 
@@ -981,17 +969,19 @@ input[type=text]:focus {
   margin-top: 32px;
 }
 .goods_in_cart-box-buttons .goods_in_cart-box-button {
+  width: 235px;
+  height: 50px;
   border: 1px solid #A4A4A4;
-  padding: 17px 40px;
   transition: 0.3s;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000000;
+  background-color: white;
 }
 .goods_in_cart-box-buttons .goods_in_cart-box-button:hover {
   background-color: #A4A4A4;
-}
-.goods_in_cart-box-buttons .goods_in_cart-box-button:hover:hover .goods_in_cart-box-button-clear {
-  color: white;
-}
-.goods_in_cart-box-buttons .goods_in_cart-box-button:hover:hover .goods_in_cart-box-button-continue {
   color: white;
 }
 .goods_in_cart-box-buttons .goods_in_cart-box-button-clear {
@@ -1033,6 +1023,7 @@ input[type=text]:focus {
   justify-content: space-between;
 }
 .goods_in_cart-right-block-input {
+  width: 360px;
   height: 45px;
   box-sizing: border-box;
   font-size: 18px;
@@ -1048,6 +1039,7 @@ input[type=text]:focus {
   padding: 11px 15px;
   width: 102px;
   height: 35px;
+  background-color: white;
   font-size: 11px;
   font-style: normal;
   font-weight: 300;
@@ -1297,7 +1289,8 @@ input[type=text]:focus {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .center {
-    padding: 0 calc(50vw - 367px);
+    padding-right: calc(50vw - 367px);
+    padding-left: calc(50vw - 367px);
   }
   .center_top {
     padding: 0 calc(50vw - 384px);
@@ -1327,7 +1320,8 @@ input[type=text]:focus {
   }
   .choice {
     gap: 19px;
-    margin: 64px 0 110px 0;
+    padding: 64px 0 110px 0;
+    margin: 0;
   }
   .section_bottom {
     grid-template-columns: repeat(2, 2fr);
@@ -1345,9 +1339,6 @@ input[type=text]:focus {
   .items_about {
     gap: 13px;
     padding: 24px 29px 20px 16px;
-  }
-  .browse {
-    margin-bottom: 70px;
   }
   .box_red_line {
     padding-left: 39px;
@@ -1374,6 +1365,9 @@ input[type=text]:focus {
     color: #FBFBFB;
     padding: 48px 0 64px 0;
     gap: 30px;
+  }
+  .goods {
+    padding: 0;
   }
   .goods_in_cart {
     padding-top: 59px;
@@ -1429,10 +1423,21 @@ input[type=text]:focus {
   .goods_in_cart-right-block {
     display: grid;
     grid-template-columns: 360px 360px;
-    padding-bottom: 147px;
   }
   .goods_in_cart-right-block-checkout {
     margin-top: 40px;
+  }
+  .goods_in_cart-left-block-items {
+    grid-template-columns: 262px 472px;
+  }
+  .goods_in_cart-left-block-item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .goods_in_cart-box-buttons {
+    justify-content: center;
+    gap: 48px;
   }
   .empty_block {
     display: none;
@@ -1440,10 +1445,12 @@ input[type=text]:focus {
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .center {
-    padding: 0 calc(50vw - 171.5px);
+    padding-right: calc(50vw - 180px);
+    padding-left: calc(50vw - 180px);
   }
   .center_top {
-    padding: 0 calc(50vw - 187.5px);
+    padding-right: calc(50vw - 187.5px);
+    padding-left: calc(50vw - 187.5px);
   }
   .icons,
   .brand_left,
@@ -1460,6 +1467,9 @@ input[type=text]:focus {
     flex-direction: row;
     align-items: center;
   }
+  .goods {
+    padding-top: 64px;
+  }
   .box_red_line {
     padding-left: 0;
   }
@@ -1469,6 +1479,9 @@ input[type=text]:focus {
   .arrivals {
     flex-direction: column;
     padding: 24px 0 46px;
+  }
+  .arrivals-new-arrivals {
+    margin-bottom: 32px;
   }
   .filter-sort {
     padding: 26px 0 41px;
@@ -1530,7 +1543,6 @@ input[type=text]:focus {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 32px;
-    margin: 64px 0;
   }
   .big {
     grid-column: span 1;
@@ -1602,11 +1614,64 @@ input[type=text]:focus {
   .reg_form-left-radio .radio-other {
     visibility: visible;
   }
+  .goods_in_cart {
+    padding-bottom: 96px;
+  }
+  .goods_in_cart-box {
+    grid: none;
+    gap: 48px;
+    padding-bottom: 48px;
+  }
+  .goods_section-product {
+    margin: 0;
+    padding-bottom: 64px;
+  }
   .goods_in_cart-left-block-items {
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr 214px;
+    height: 188px;
   }
   .goods_in_cart-left-block-item {
     width: 214px;
+  }
+  .goods_in_cart-left-block-item-name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #6F6E6E;
+    width: 140px;
+  }
+  .goods_in_cart-left-block-item-price,
+  .goods_in_cart-left-block-item-color,
+  .goods_in_cart-left-block-item-quantity {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #6F6E6E;
+  }
+  .goods_in_cart-left-block-item-quantity-input {
+    width: 24px;
+    height: 15px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #6F6E6E;
+  }
+  .goods_in_cart-box-buttons {
+    margin-top: 0;
+  }
+  .goods_in_cart-box-buttons .goods_in_cart-box-button {
+    width: 175px;
+    height: 33px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #6F6E6E;
+    gap: 0;
+    justify-content: space-between;
   }
   .goods_in_cart-left-block-img {
     width: 143px;
@@ -1614,6 +1679,9 @@ input[type=text]:focus {
   }
   .empty_block {
     display: none;
+  }
+  .goods_in_cart-right-block {
+    flex: none;
   }
   .product_description-box {
     border: none;
@@ -1631,5 +1699,14 @@ input[type=text]:focus {
   }
   .product_description .description-sorting {
     justify-content: center;
+  }
+  .closeModal {
+    top: 5px;
+    right: 25px;
+  }
+  .closeModal::before,
+  .closeModal::after {
+    width: 10px;
+    height: 1px;
   }
 }/*# sourceMappingURL=style.css.map */
